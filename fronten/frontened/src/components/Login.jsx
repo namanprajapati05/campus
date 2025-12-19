@@ -41,7 +41,7 @@ const Login = () => {
 
       <button onClick={loginUser}>Login</button>
 
-      {/* 🔥 SIGNUP LINK */}
+  
       <p>
         New student? <Link to="/signup">Create account</Link>
       </p>
