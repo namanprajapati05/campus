@@ -1,36 +1,36 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-
-// Student pages
+import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
+import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import StudentForm from "./components/StudentForm";
-
-// Admin pages
 import AdminLogin from "./components/AdminLogin";
 import AdminPanel from "./components/AdminPanel";
+import "./App.css";
+
 
 function App() {
   return (
-    <Routes>
 
-      {/* ================= STUDENT ROUTES ================= */}
-      <Route path="/" element={<Login />} />
+  
+    
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      {/* Student protected route */}
       <Route
         path="/student"
         element={
           localStorage.getItem("roll")
             ? <StudentForm />
-            : <Navigate to="/" />
+            : <Navigate to="/login" />
         }
       />
 
-      {/* ================= ADMIN ROUTES ================= */}
       <Route path="/admin" element={<AdminLogin />} />
 
-      {/* Admin protected route */}
       <Route
         path="/admin/panel"
         element={
@@ -39,8 +39,9 @@ function App() {
             : <Navigate to="/admin" />
         }
       />
-
     </Routes>
+
+
   );
 }
 

@@ -60,7 +60,6 @@ app.post("/login", async (req, res) => {
   if (!user) {
     return res.json({ message: "Invalid credentials" });
   }
-
   res.json({
     message: "Login successful",
     roll: user.roll
@@ -71,7 +70,7 @@ app.post("/login", async (req, res) => {
 app.post("/admin/login", (req, res) => {
   const { email, password } = req.body;
 
-  // Fixed admin credentials
+
   const ADMIN_EMAIL = "admin@college.com";
   const ADMIN_PASSWORD = "admin123";
 

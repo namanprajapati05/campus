@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding:0px ;
+}
+.home {
+  height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.overlay h1 {
+  color: #1e3c72;
+}
+
+.overlay p {
+  margin: 20px 0;
+  color: #444;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #1e3c72;
+  color: white;
+}
+
+.admin-btn {
+  background: #b71c1c;
+}
+
+button:hover {
+  opacity: 0.9;
+}

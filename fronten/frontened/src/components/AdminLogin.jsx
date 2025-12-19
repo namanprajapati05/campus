@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +31,11 @@ const AdminLogin = () => {
   };
 
   return (
+ 
+
     <div className="box">
+     
+
       <h2>Admin Login</h2>
 
       <input
@@ -48,6 +53,12 @@ const AdminLogin = () => {
       />
 
       <button onClick={login}>Login</button>
+
+      <p className="admin-note">
+   Admin credentials are issued only by the institute. 
+  Unauthorized access is strictly prohibited.
+</p>
+
 
       <p>{msg}</p>
     </div>
